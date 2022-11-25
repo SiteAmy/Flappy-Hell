@@ -14,6 +14,7 @@
 		E1B944DD292D0FD00037692B /* Flappy_HellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944DC292D0FD00037692B /* Flappy_HellTests.swift */; };
 		E1B944E7292D0FD00037692B /* Flappy_HellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944E6292D0FD00037692B /* Flappy_HellUITests.swift */; };
 		E1B944E9292D0FD00037692B /* Flappy_HellUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944E8292D0FD00037692B /* Flappy_HellUITestsLaunchTests.swift */; };
+		E1B944F6292D130A0037692B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944F5292D130A0037692B /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E1B944E2292D0FD00037692B /* Flappy HellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flappy HellUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B944E6292D0FD00037692B /* Flappy_HellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_HellUITests.swift; sourceTree = "<group>"; };
 		E1B944E8292D0FD00037692B /* Flappy_HellUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_HellUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E1B944F5292D130A0037692B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E1B944CB292D0FCD0037692B /* Flappy_HellApp.swift */,
+				E1B944F5292D130A0037692B /* GameScene.swift */,
 				E1B944CD292D0FCD0037692B /* ContentView.swift */,
 				E1B944CF292D0FCF0037692B /* Assets.xcassets */,
 				E1B944D1292D0FCF0037692B /* Preview Content */,
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B944F6292D130A0037692B /* GameScene.swift in Sources */,
 				E1B944CE292D0FCD0037692B /* ContentView.swift in Sources */,
 				E1B944CC292D0FCD0037692B /* Flappy_HellApp.swift in Sources */,
 			);
