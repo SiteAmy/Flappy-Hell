@@ -10,6 +10,7 @@
 		E101229E2934C5C300D3238C /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101229D2934C5C300D3238C /* MainMenu.swift */; };
 		E10122A02934CDF600D3238C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101229F2934CDF600D3238C /* SettingsView.swift */; };
 		E10122A22934CEA400D3238C /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10122A12934CEA400D3238C /* ScoreView.swift */; };
+		E13E643F293E0B48003379DF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E13E643E293E0B48003379DF /* GameScene.sks */; };
 		E1B944CC292D0FCD0037692B /* Flappy_HellApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944CB292D0FCD0037692B /* Flappy_HellApp.swift */; };
 		E1B944CE292D0FCD0037692B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944CD292D0FCD0037692B /* ContentView.swift */; };
 		E1B944D0292D0FCF0037692B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B944CF292D0FCF0037692B /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		E101229D2934C5C300D3238C /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		E101229F2934CDF600D3238C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = SOURCE_ROOT; };
 		E10122A12934CEA400D3238C /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		E13E643E293E0B48003379DF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		E1B944C8292D0FCD0037692B /* Flappy Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B944CB292D0FCD0037692B /* Flappy_HellApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_HellApp.swift; sourceTree = "<group>"; };
 		E1B944CD292D0FCD0037692B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				E101229F2934CDF600D3238C /* SettingsView.swift */,
 				E1B944CF292D0FCF0037692B /* Assets.xcassets */,
 				E1B944D1292D0FCF0037692B /* Preview Content */,
+				E13E643E293E0B48003379DF /* GameScene.sks */,
 			);
 			path = "Flappy Hell";
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1B944D3292D0FCF0037692B /* Preview Assets.xcassets in Resources */,
+				E13E643F293E0B48003379DF /* GameScene.sks in Resources */,
 				E1B944D0292D0FCF0037692B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
