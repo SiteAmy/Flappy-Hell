@@ -41,7 +41,7 @@ class GameScene: SKScene {
         playerShip = ((self.childNode(withName: "//PlayerShipScene")) as! SKSpriteNode)
         scrollLayer = self.childNode(withName: "scrollLayer")
         
-        playerShip.isPaused = false
+        //playerShip.spawned()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,6 +49,7 @@ class GameScene: SKScene {
         playerShip.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
         playerShip.physicsBody?.applyAngularImpulse(1)
         sinceTouch = 0
+        //playerShip.tapped
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -71,26 +72,11 @@ class GameScene: SKScene {
     
     func scrollWord() {
         scrollLayer.position.x -= scrollSpeed * CGFloat(fixedDelta)
-        /*for ground in scrollLayer.children as! [SKSpriteNode] {
-            let groundPosition = scrollLayer.convert(ground.position, to: self)
-            if groundPosition.x <= ground.size.width / 2 {
-                let newPosition = CGPoint(x: (self.size.width / 2) + ground.size.width, y: groundPosition.y)
-                ground.position = self.convert(newPosition, to: scrollLayer)
-            }
-        } */
         /* Loop through scroll layer nodes */
         for ground in scrollLayer.children as! [SKSpriteNode] {
-
-          /* Get ground node position, convert node position to scene space */
           let groundPosition = scrollLayer.convert(ground.position, to: self)
-
-          /* Check if ground sprite has left the scene */
           if groundPosition.x <= -ground.size.width / 2 {
-
-              /* Reposition ground sprite to the second starting position */
               let newPosition = CGPoint(x: (self.size.width / 2) + ground.size.width, y: groundPosition.y)
-
-              /* Convert new node position back to scroll layer space */
               ground.position = self.convert(newPosition, to: scrollLayer)
           }
         }

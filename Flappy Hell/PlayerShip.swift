@@ -4,7 +4,7 @@
 //
 //  Created by Amy Nijmeijer on 12/12/2022.
 //
-/*
+
 import UIKit
 import Foundation
 import SpriteKit
@@ -12,29 +12,42 @@ import GameplayKit
 
 class PlayerShip: SKSpriteNode{
     
-    var playerShip : SKSpriteNode!
+    var sinceTouch : CFTimeInterval = 0
+    let fixedDelta: CFTimeInterval = 1.0 / 60.0
+    var playerShipSprite: SKSpriteNode!
 
-    func didMove(to view: SKView) {
-        /* Setup your scene here */
-        playerShip = (self.childNode(withName: "//PlayerShipScene") as! SKSpriteNode)
-        
-        playerShip.isPaused = false
+
+
+    func spawned(){
+        playerShipSprite = ((self.childNode(withName: "//PlayerShipScene")) as! SKSpriteNode)
+        playerShipSprite.isPaused = false
     }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+    func tapped() {
         /* Called when a touch begins */
-        playerShip.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
+        playerShipSprite.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
+        playerShipSprite.physicsBody?.applyAngularImpulse(1)
+        sinceTouch = 0
+
     }
 
-    func update(_ currentTime: TimeInterval) {
+    func updateShip(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
-        let velocityY = playerShip.physicsBody?.velocity.dy ?? 0
+        let velocityY = playerShipSprite.physicsBody?.velocity.dy ?? 0
         if velocityY > 400 {
-            playerShip.physicsBody?.velocity.dy = 400
+            playerShipSprite.physicsBody?.velocity.dy = 400
         }
+        //Rotation
+        if sinceTouch > 0.2 {
+            let impulse = -2000 * fixedDelta
+            playerShipSprite.physicsBody?.applyAngularImpulse(CGFloat(impulse))
+        }
+        playerShipSprite.zRotation.clamp(v1: CGFloat(-90).degreesToRadians(), CGFloat(30).degreesToRadians())
+        playerShipSprite.physicsBody?.angularVelocity.clamp(v1: -1, 3)
+        sinceTouch += fixedDelta
     }
 }
-*/
+
 
 
 
