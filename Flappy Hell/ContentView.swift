@@ -13,16 +13,11 @@ struct ContentView: View {
     
     var scene: SKScene{
         let scene = GameScene(fileNamed: "GameScene")!
-        //scene.size = CGSize(width: 380, height: 700)
-        //scene.scaleMode = .fill
         return scene
         }
     
     var body: some View {
         SpriteView(scene:scene)
-        //scene.scaleMode = .aspectFill
-            //.frame(width: 380, height: 700)
-            //.ignoresSafeArea()
     }
 }
 
