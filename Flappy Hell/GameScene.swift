@@ -9,6 +9,15 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
+enum GameSceneState {
+    case active, gameOver
+}
+
+
+
+
+
+
 
 class GameScene: SKScene, SKPhysicsContactDelegate{
     
@@ -16,11 +25,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     var scrollLayer: SKNode!
     var obstacleSource: SKNode!
     var obstacleLayer: SKNode!
-
+    var buttonRestart: MSButtonNode!
+    var gameState: GameSceneState = .active
+    var scoreLabel: SKLabelNode!
+    
+    
     var sinceTouch : CFTimeInterval = 0
     var spawnTimer: CFTimeInterval = 0
     let fixedDelta: CFTimeInterval = 1.0 / 60.0
     let scrollSpeed: CGFloat = 100
+    var points = 0
 
     func viewDidLoad(){
         if let view = self.view {
@@ -46,6 +60,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         obstacleLayer = self.childNode(withName: "obstacleLayer")
         obstacleSource = self.childNode(withName: "//obstacleNode")
         physicsWorld.contactDelegate = self
+        buttonRestart = (self.childNode(withName: "buttonRestart") as! MSButtonNode)
+        buttonRestart.selectedHandler = {
+            let skView = self.view as SKView?
+            let scene = GameScene(fileNamed: "GameScene") as GameScene?
+            scene?.scaleMode = .aspectFill
+            skView?.presentScene(scene)
+        }
+        buttonRestart.state = .MSButtonNodeStateHidden
+        scoreLabel = (self.childNode(withName: "scoreLabel") as! SKLabelNode)
+        scoreLabel.text = "\(points)"
         
 
         
@@ -53,14 +77,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
+        if gameState != .active { return }
         playerShip.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
         playerShip.physicsBody?.applyAngularImpulse(1)
         sinceTouch = 0
+
         
     }
     
     override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
+        if gameState != .active { return }
         let velocityY = playerShip.physicsBody?.velocity.dy ?? 0
         if velocityY > 400 {
             playerShip.physicsBody?.velocity.dy = 400
@@ -112,6 +139,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        print("TODO:Collison Code")
+
+        let contactA = contact.bodyA
+        let contactB = contact.bodyB
+        let nodeA = contactA.node!
+        let nodeB = contactB.node!
+        if nodeA.name == "goal" || nodeB.name == "goal" {
+          points += 1
+          scoreLabel.text = String(points)
+          return
+        }
+        
+        if gameState != .active { return }
+        gameState = .gameOver
+        playerShip.physicsBody?.allowsRotation = false
+        playerShip.physicsBody?.angularVelocity = 0
+        playerShip.removeAllActions()
+        
+        let playerDeath = SKAction.run({
+            self.playerShip.zRotation = CGFloat(-90).degreesToRadians()
+        })
+
+        playerShip.run(playerDeath)
+        buttonRestart.state = .MSButtonNodeStateActive
     }
 }
