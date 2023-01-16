@@ -19,7 +19,7 @@ class PlayerShip: SKSpriteNode{
 
 
     func spawned(){
-        playerShipSprite = ((self.childNode(withName: "//PlayerShipScene")) as! SKSpriteNode)
+        playerShipSprite = ((self.childNode(withName: "//PlayerShipSpriteScene")) as! SKSpriteNode)
         playerShipSprite.isPaused = false
     }
     

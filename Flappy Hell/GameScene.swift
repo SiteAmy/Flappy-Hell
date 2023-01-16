@@ -10,7 +10,7 @@ import SpriteKit
 import GameplayKit
 
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate{
     
     var playerShip: SKSpriteNode!
     var scrollLayer: SKNode!
@@ -45,6 +45,8 @@ class GameScene: SKScene {
         scrollLayer = self.childNode(withName: "scrollLayer")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
         obstacleSource = self.childNode(withName: "//obstacleNode")
+        physicsWorld.contactDelegate = self
+        
 
         
     }
@@ -54,6 +56,7 @@ class GameScene: SKScene {
         playerShip.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
         playerShip.physicsBody?.applyAngularImpulse(1)
         sinceTouch = 0
+        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -97,14 +100,18 @@ class GameScene: SKScene {
             }
         }
         
-        if spawnTimer >= 2 {
+        if spawnTimer >= 2.5 {
             let newObstacle = obstacleSource.copy() as! SKNode
             obstacleLayer.addChild(newObstacle)
-            let randomPosition =  CGPoint(x: 640, y: CGFloat.random(in: -70...130))
+            let randomPosition =  CGPoint(x: 640, y: CGFloat.random(in: -80...120))
             newObstacle.position = self.convert(randomPosition, to: obstacleLayer)
             spawnTimer = 0
 
         }
         
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        print("TODO:Collison Code")
     }
 }
