@@ -11,8 +11,8 @@
 		E10122A02934CDF600D3238C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101229F2934CDF600D3238C /* SettingsView.swift */; };
 		E10122A22934CEA400D3238C /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10122A12934CEA400D3238C /* ScoreView.swift */; };
 		E13E643F293E0B48003379DF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E13E643E293E0B48003379DF /* GameScene.sks */; };
+		E153A40729754CD1006287F0 /* PlayerShip.sks in Resources */ = {isa = PBXBuildFile; fileRef = E174AC8E29471CA500008023 /* PlayerShip.sks */; };
 		E1627168296C21B4004AE910 /* Obstacle.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1627167296C21B4004AE910 /* Obstacle.sks */; };
-		E174AC8F29471CA500008023 /* PlayerShip.sks in Resources */ = {isa = PBXBuildFile; fileRef = E174AC8E29471CA500008023 /* PlayerShip.sks */; };
 		E174ACD02947599600008023 /* PlayerShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174ACCF2947599600008023 /* PlayerShip.swift */; };
 		E17D7C27294C65E2007E1B09 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D7C26294C65E2007E1B09 /* CGFloat+Extensions.swift */; };
 		E18DFEE52971AE10002C6AA3 /* Obstacles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18DFEE42971AE10002C6AA3 /* Obstacles.swift */; };
@@ -263,8 +263,8 @@
 			files = (
 				E1627168296C21B4004AE910 /* Obstacle.sks in Resources */,
 				E1B944D3292D0FCF0037692B /* Preview Assets.xcassets in Resources */,
+				E153A40729754CD1006287F0 /* PlayerShip.sks in Resources */,
 				E13E643F293E0B48003379DF /* GameScene.sks in Resources */,
-				E174AC8F29471CA500008023 /* PlayerShip.sks in Resources */,
 				E1B944D0292D0FCF0037692B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

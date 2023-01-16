@@ -41,10 +41,10 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         /* Setup your scene here */
-        playerShip = ((self.childNode(withName: "//PlayerShipScene")) as! SKSpriteNode)
+        playerShip = ((self.childNode(withName: "//PlayerShipSpriteScene")) as! SKSpriteNode)
         scrollLayer = self.childNode(withName: "scrollLayer")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
-        obstacleSource = self.childNode(withName: "//TowerSpriteScene")
+        obstacleSource = self.childNode(withName: "//obstacleNode")
 
         
     }
@@ -97,9 +97,10 @@ class GameScene: SKScene {
             }
         }
         
-        if spawnTimer >= 1 {
+        if spawnTimer >= 2 {
             let newObstacle = obstacleSource.copy() as! SKNode
-            let randomPosition =  CGPoint(x: 347, y: CGFloat.random(in: 100...370))
+            obstacleLayer.addChild(newObstacle)
+            let randomPosition =  CGPoint(x: 640, y: CGFloat.random(in: -70...130))
             newObstacle.position = self.convert(randomPosition, to: obstacleLayer)
             spawnTimer = 0
 
