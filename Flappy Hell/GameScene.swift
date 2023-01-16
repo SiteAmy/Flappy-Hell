@@ -217,8 +217,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         let shootAmount = direction * 1000
         let realDest = shootAmount + bulletPlayer.position
         let actionMove = SKAction.move(to: realDest, duration: 2.0)
-          let actionMoveDone = SKAction.removeFromParent()
-          bulletPlayer.run(SKAction.sequence([actionMove, actionMoveDone]))
+        let actionMoveDone = SKAction.removeFromParent()
+        bulletPlayer.run(SKAction.sequence([actionMove, actionMoveDone]))
         
     }
 }
