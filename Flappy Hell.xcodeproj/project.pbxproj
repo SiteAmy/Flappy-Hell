@@ -13,6 +13,7 @@
 		E13E643F293E0B48003379DF /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E13E643E293E0B48003379DF /* GameScene.sks */; };
 		E153A40729754CD1006287F0 /* PlayerShip.sks in Resources */ = {isa = PBXBuildFile; fileRef = E174AC8E29471CA500008023 /* PlayerShip.sks */; };
 		E153A40929756654006287F0 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E153A40829756653006287F0 /* MSButtonNode.swift */; };
+		E153A40B297578DF006287F0 /* Turret.sks in Resources */ = {isa = PBXBuildFile; fileRef = E153A40A297578DF006287F0 /* Turret.sks */; };
 		E1627168296C21B4004AE910 /* Obstacle.sks in Resources */ = {isa = PBXBuildFile; fileRef = E1627167296C21B4004AE910 /* Obstacle.sks */; };
 		E174ACD02947599600008023 /* PlayerShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174ACCF2947599600008023 /* PlayerShip.swift */; };
 		E17D7C27294C65E2007E1B09 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D7C26294C65E2007E1B09 /* CGFloat+Extensions.swift */; };
@@ -50,6 +51,7 @@
 		E10122A12934CEA400D3238C /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		E13E643E293E0B48003379DF /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		E153A40829756653006287F0 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		E153A40A297578DF006287F0 /* Turret.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Turret.sks; sourceTree = "<group>"; };
 		E1627167296C21B4004AE910 /* Obstacle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Obstacle.sks; sourceTree = "<group>"; };
 		E174AC8E29471CA500008023 /* PlayerShip.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerShip.sks; sourceTree = "<group>"; };
 		E174ACCF2947599600008023 /* PlayerShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShip.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				E1B944D1292D0FCF0037692B /* Preview Content */,
 				E13E643E293E0B48003379DF /* GameScene.sks */,
 				E174AC8E29471CA500008023 /* PlayerShip.sks */,
+				E153A40A297578DF006287F0 /* Turret.sks */,
 				E1627167296C21B4004AE910 /* Obstacle.sks */,
 			);
 			path = "Flappy Hell";
@@ -269,6 +272,7 @@
 				E153A40729754CD1006287F0 /* PlayerShip.sks in Resources */,
 				E13E643F293E0B48003379DF /* GameScene.sks in Resources */,
 				E1B944D0292D0FCF0037692B /* Assets.xcassets in Resources */,
+				E153A40B297578DF006287F0 /* Turret.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

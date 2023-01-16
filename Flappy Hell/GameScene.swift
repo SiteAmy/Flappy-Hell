@@ -13,18 +13,13 @@ enum GameSceneState {
     case active, gameOver
 }
 
-
-
-
-
-
-
 class GameScene: SKScene, SKPhysicsContactDelegate{
     
     var playerShip: SKSpriteNode!
     var scrollLayer: SKNode!
     var obstacleSource: SKNode!
     var obstacleLayer: SKNode!
+    var turretSource: SKNode!
     var buttonRestart: MSButtonNode!
     var gameState: GameSceneState = .active
     var scoreLabel: SKLabelNode!
@@ -59,6 +54,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
         scrollLayer = self.childNode(withName: "scrollLayer")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
         obstacleSource = self.childNode(withName: "//obstacleNode")
+        turretSource = self.childNode(withName: "//turretNode")
         physicsWorld.contactDelegate = self
         buttonRestart = (self.childNode(withName: "buttonRestart") as! MSButtonNode)
         buttonRestart.selectedHandler = {
@@ -127,14 +123,26 @@ class GameScene: SKScene, SKPhysicsContactDelegate{
             }
         }
         
+        for turret in obstacleLayer.children as! [SKReferenceNode] {
+            let turretPosition = obstacleLayer.convert(turret.position, to:self)
+            if turretPosition.x <= -26 {
+                turret.removeFromParent()
+            }
+        }
+        
         if spawnTimer >= 2.5 {
             let newObstacle = obstacleSource.copy() as! SKNode
             obstacleLayer.addChild(newObstacle)
-            let randomPosition =  CGPoint(x: 640, y: CGFloat.random(in: -80...120))
-            newObstacle.position = self.convert(randomPosition, to: obstacleLayer)
+            let randomPositionTower =  CGPoint(x: 640, y: CGFloat.random(in: 50...220))
+            newObstacle.position = self.convert(randomPositionTower, to: obstacleLayer)
+            let newTurret = turretSource.copy() as! SKNode
+            obstacleLayer.addChild(newTurret)
+            let randomPositionTurret =  CGPoint(x: 530, y: 67)
+            newTurret.position = self.convert(randomPositionTurret, to: obstacleLayer )
             spawnTimer = 0
 
         }
+        
         
     }
     
