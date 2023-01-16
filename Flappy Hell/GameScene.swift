@@ -12,7 +12,6 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    //var playerShip = PlayerShip()
     var playerShip: SKSpriteNode!
     var scrollLayer: SKNode!
     var obstacleSource: SKNode!
@@ -48,7 +47,6 @@ class GameScene: SKScene {
         obstacleSource = self.childNode(withName: "//TowerSpriteScene")
 
         
-        //playerShip.spawned()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -56,7 +54,6 @@ class GameScene: SKScene {
         playerShip.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 300))
         playerShip.physicsBody?.applyAngularImpulse(1)
         sinceTouch = 0
-        //playerShip.tapped
     }
     
     override func update(_ currentTime: TimeInterval) {
