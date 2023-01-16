@@ -9,6 +9,7 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
+
 class GameScene: SKScene {
     
     //var playerShip = PlayerShip()
@@ -44,7 +45,7 @@ class GameScene: SKScene {
         playerShip = ((self.childNode(withName: "//PlayerShipScene")) as! SKSpriteNode)
         scrollLayer = self.childNode(withName: "scrollLayer")
         obstacleLayer = self.childNode(withName: "obstacleLayer")
-        obstacleSource = self.childNode(withName: "Obstacle")
+        obstacleSource = self.childNode(withName: "//TowerSpriteScene")
 
         
         //playerShip.spawned()

@@ -15,6 +15,7 @@
 		E174AC8F29471CA500008023 /* PlayerShip.sks in Resources */ = {isa = PBXBuildFile; fileRef = E174AC8E29471CA500008023 /* PlayerShip.sks */; };
 		E174ACD02947599600008023 /* PlayerShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174ACCF2947599600008023 /* PlayerShip.swift */; };
 		E17D7C27294C65E2007E1B09 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17D7C26294C65E2007E1B09 /* CGFloat+Extensions.swift */; };
+		E18DFEE52971AE10002C6AA3 /* Obstacles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18DFEE42971AE10002C6AA3 /* Obstacles.swift */; };
 		E1B944CC292D0FCD0037692B /* Flappy_HellApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944CB292D0FCD0037692B /* Flappy_HellApp.swift */; };
 		E1B944CE292D0FCD0037692B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B944CD292D0FCD0037692B /* ContentView.swift */; };
 		E1B944D0292D0FCF0037692B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1B944CF292D0FCF0037692B /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		E174AC8E29471CA500008023 /* PlayerShip.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlayerShip.sks; sourceTree = "<group>"; };
 		E174ACCF2947599600008023 /* PlayerShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerShip.swift; sourceTree = "<group>"; };
 		E17D7C26294C65E2007E1B09 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		E18DFEE42971AE10002C6AA3 /* Obstacles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obstacles.swift; sourceTree = "<group>"; };
 		E1B944C8292D0FCD0037692B /* Flappy Hell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Hell.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1B944CB292D0FCD0037692B /* Flappy_HellApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_HellApp.swift; sourceTree = "<group>"; };
 		E1B944CD292D0FCD0037692B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		E1B944CA292D0FCD0037692B /* Flappy Hell */ = {
 			isa = PBXGroup;
 			children = (
+				E18DFEE42971AE10002C6AA3 /* Obstacles.swift */,
 				E1B944CB292D0FCD0037692B /* Flappy_HellApp.swift */,
 				E101229D2934C5C300D3238C /* MainMenu.swift */,
 				E1B944F5292D130A0037692B /* GameScene.swift */,
@@ -291,6 +294,7 @@
 				E1B944F6292D130A0037692B /* GameScene.swift in Sources */,
 				E174ACD02947599600008023 /* PlayerShip.swift in Sources */,
 				E1B944CE292D0FCD0037692B /* ContentView.swift in Sources */,
+				E18DFEE52971AE10002C6AA3 /* Obstacles.swift in Sources */,
 				E1B944CC292D0FCD0037692B /* Flappy_HellApp.swift in Sources */,
 				E101229E2934C5C300D3238C /* MainMenu.swift in Sources */,
 				E17D7C27294C65E2007E1B09 /* CGFloat+Extensions.swift in Sources */,
